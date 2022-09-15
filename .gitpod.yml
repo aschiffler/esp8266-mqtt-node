@@ -1,11 +1,13 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - name: build
-    command: |
-      pio run
   - name: esp-tool
     command: npx --yes serve esp-web-flash
+    openMode: tab-before
+  - name: build
+    openMode: tab-after
+    init: |
+      pio run
 
 ports:
   - name: esp-tool

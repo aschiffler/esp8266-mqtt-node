@@ -4,3 +4,4 @@
 .vscode/launch.json
 .vscode/ipch
 esp-web-flash/firmware.bin
+build

@@ -1,2 +1,14 @@
 image:
   file: .gitpod.Dockerfile
+tasks:
+  - name: build
+    command: |
+      pio run
+  - name: esp-tool
+    command: npx --yes serve esp-web-flash
+
+ports:
+  - name: esp-tool
+    description: ESP Tool
+    port: 3000
+    onOpen: open-browser

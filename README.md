@@ -11,6 +11,7 @@ const char* mqttUser = "user";
 const char* mqttPassword = "pass";
 ```
 For the variable ```mqtt_server``` use either a ipv4 address or a domain name.
+A detailed tutorial is available [here](https://cedalo.com/blog/)
 
 # Overview
 Various exp8266 exists and can be used to realize eg. IoT applications. The microcontroller needs to be flashed with a corresponding firmware to realize the application. 

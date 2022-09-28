@@ -12,6 +12,7 @@ const char* ssid = "WIFINAME";
 const char* password = "WIFI_PASS";
 
 const char* mqtt_server = "SERVER_IP";
+const char* mqtt_server_port = "SERVER_PORT";
 const char* mqttUser = "user";
 const char* mqttPassword = "pass";
 const char* mqttTopicIn = "in";

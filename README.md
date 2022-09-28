@@ -19,7 +19,7 @@ A detailed tutorial is available [here](https://cedalo.com/blog/)
 ![](doc/esp8266_mosquitto_connection.png)
 
 # Overview
-Various ESP8266 development boards exist and can be used to realize for example small and smart IoT applications (like (this)[https://github.com/lumapu/ahoy]). The microcontroller needs to be flashed with a corresponding firmware to realize the application. 
+Various ESP8266 development boards exist and can be used to realize for example small and smart IoT applications (like [this](https://github.com/lumapu/ahoy)). The microcontroller needs to be flashed with a corresponding firmware to realize the application. 
 Principal steps
 1. Write and compile c/c++ code
 2. Create the flashable firmware

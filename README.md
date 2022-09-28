@@ -1,5 +1,16 @@
-# esp8266-mqtt-node
-This repository holds a sample code/project using the Arduino Framework to connect a esp8266 dev board to a mqtt broker
+# Introduction for the esp8266-mqtt-node
+This repository holds a sample code and a corresponding platformIO project using the Arduino Framework to connect a esp8266 dev board to a mqtt broker.
+The code is for demonstration purposes and does directly use hardcoded connection settings and credentials. So you have to customize at least the following lines in [main.cpp, lines 11-18](blob/main/src/main.cpp) to use the code:
+```c
+const char* ssid = "WIFINAME";
+const char* password = "WIFI_PASS";
+
+const char* mqtt_server = "SERVER_IP";
+const char* mqtt_server_port = "SERVER_PORT";
+const char* mqttUser = "user";
+const char* mqttPassword = "pass";
+```
+For the variable ```mqtt_server``` use either a ipv4 address or a domain name.
 
 # Overview
 Various exp8266 exists and can be used to realize eg. IoT applications. The microcontroller needs to be flashed with a corresponding firmware to realize the application. 

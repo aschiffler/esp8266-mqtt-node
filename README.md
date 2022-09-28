@@ -2,15 +2,18 @@
 This repository holds a sample code and a corresponding platformIO project using the Arduino Framework to connect a esp8266 dev board to a mqtt broker.
 The code is for demonstration purposes and does directly use hardcoded connection settings and credentials. So you have to customize at least the following lines in [main.cpp, lines 11-18](blob/main/src/main.cpp) to use the code:
 ```c
-const char* ssid = "WIFINAME";
-const char* password = "WIFI_PASS";
-
-const char* mqtt_server = "SERVER_IP";
-const char* mqtt_server_port = "SERVER_PORT";
+//#define MQTT_TLS // uncomment this define to enable TLS transport
+//#define MQTT_TLS_VERIFY // uncomment this define to enable broker certificate verification
+const char* ssid = "YOUR-WIFI";
+const char* password = "YOUR-WIFI-PSK";
+const char* mqtt_server = "BROKER"; // eg. your-demo.cedalo.cloud or 192.168.1.11
+const uint16_t mqtt_server_port = 1883; // or 8883 most common for tls transport
 const char* mqttUser = "user";
 const char* mqttPassword = "pass";
+const char* mqttTopicIn = "esp-8266-in";
+const char* mqttTopicOut = "esp-8266-out";
 ```
-For the variable ```mqtt_server``` use either a ipv4 address or a domain name.
+For the variable ```mqtt_server``` use either a ipv4 address or a domain name. Only ```tcp``` transport is supported (no websocket).
 A detailed tutorial is available [here](https://cedalo.com/blog/)
 
 # Overview

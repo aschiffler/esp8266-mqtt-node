@@ -83,10 +83,10 @@ void callback(char* topic, byte* payload, unsigned int length) {
 }
 
 //--------------------------------------
-// function reconnect called to (re)connect
+// function connect called to (re)connect
 // to the broker
 //--------------------------------------
-void reconnect() {
+void connect() {
   while (!mqttClient.connected()) {
     Serial.print("Attempting MQTT connection...");
     String mqttClientId = "";
@@ -117,7 +117,7 @@ void setup() {
 //--------------------------------------
 void loop() {
   if (!mqttClient.connected()) {
-    reconnect();
+    connect();
   }
  
   mqttClient.loop();

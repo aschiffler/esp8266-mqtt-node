@@ -2,9 +2,12 @@ Quickstart 👇  Coding in the browser; Web-based flash-tool is included.
 
 [![Click here to start your development environment](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/aschiffler/esp8266-mqtt-node)
 
-# Introduction for the esp8266-mqtt-node
+# esp8266-mqtt-node
+
+![](doc/esp8266_mosquitto_connection.png)
+
 This repository holds a sample code and a corresponding platformIO project using the Arduino Framework to connect an esp8266 dev board to a mqtt broker.
-The code is for demonstration purposes and directly uses hardcoded connection settings and credentials. So you have to customize at least the following lines in [main.cpp, lines 11-18](blob/main/src/main.cpp) to use the code:
+The code is for demonstration purposes and directly uses hardcoded connection settings and credentials. So you have to customize at least the following lines in [main.cpp, lines 11-18](blob/main/src/main.cpp) and (re)build the firmware with **```pio run```** :
 ```c
 //#define MQTT_TLS // uncomment this define to enable TLS transport
 //#define MQTT_TLS_VERIFY // uncomment this define to enable broker certificate verification
@@ -20,7 +23,6 @@ const char* mqttTopicOut = "esp-8266-out";
 For the variable ```mqtt_server``` use either an ipv4 address or a domain name. Only ```tcp``` transport is supported (no WebSocket).
 A detailed tutorial is available [here](https://cedalo.com/blog/)
 
-![](doc/esp8266_mosquitto_connection.png)
 
 # Overview
 Various ESP8266 development boards exist and can be used to realize for example small and smart IoT applications (like [this](https://github.com/lumapu/ahoy)). The microcontroller needs to be flashed with a corresponding firmware to realize the application. 
@@ -29,7 +31,7 @@ Principal steps
 2. Create the flashable firmware
 3. Flash the firmware and test the application
 
-## Quickstart: Use gitpod for browser-integrated development
+## Use gitpod for browser-integrated development
 For the steps sketched above you will need a IDE like Micorosft VSCode, the needed software frameworks, and libraries.
 The setup of all this is already prepared here in this repository using gitpod. The only thing you need is a github account.
 

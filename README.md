@@ -1,3 +1,5 @@
+Quickstart 👇  Coding in the browser; Web-based flash-tool is included.
+
 [![Click here to start your development environment](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/aschiffler/esp8266-mqtt-node)
 
 # Introduction for the esp8266-mqtt-node
@@ -57,4 +59,4 @@ You can use the gitpod environment where a browser-based flash tool is integrate
 Click connect and flash the firmware.
 
 ### [Adjust, improve or extend the code](#edit)
-Open the main source file ```main.cpp``` from folder ```src``` 2️⃣ do your edits and save the file 3️⃣. Then type in terminal 4️⃣ the command ```pio run```. This shall start the compilation and the creation of the firmware. If successful you can go to the above section [Flash the firmware](#flash) to upload your modified firmware to your device.
+Open the main source file ```main.cpp``` from folder ```src``` 2️⃣ do your edits and save the file 3️⃣. Then type in terminal 4️⃣ the command **```pio run```**. This shall start the compilation and the creation of the firmware. If successful you can go to the above section [Flash the firmware](#flash) to upload your modified firmware to your device.

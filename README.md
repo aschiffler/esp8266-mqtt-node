@@ -62,3 +62,6 @@ Click connect and flash the firmware.
 
 ### [Adjust, improve or extend the code](#edit)
 Open the main source file ```main.cpp``` from folder ```src``` 2️⃣ do your edits and save the file 3️⃣. Then type in terminal 4️⃣ the command **```pio run```**. This shall start the compilation and the creation of the firmware. If successful you can go to the above section [Flash the firmware](#flash) to upload your modified firmware to your device.
+
+## Usage of the console output
+If you use the browser-based development environment you can use the ESP-Web-Flash-Tool also to monitor the serial output. A sample out put is shown below.  

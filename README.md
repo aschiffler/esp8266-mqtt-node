@@ -58,10 +58,37 @@ You can use the gitpod environment where a browser-based flash tool is integrate
 
 ![](doc/flash_tool.png)
 
-Click connect and flash the firmware.
+Steps to flash the firmware:
+1. Connect your esp8266 module via USB to the PC where the browser runs
+2. Click connect
+3. Choose the corresponding com port from the list and click connect
+4. Click install ESP8266-MQTT-NODE or Logs&Console (see below)
+
+![](doc/install_console_web_tool.png)
+
+The installation of the firmware starts with eraseing the flash storage of the device (!).
+
+![](doc/flash_firmware.png)
+
+### Troubleshoot if your ESP device can not connect to the ESP-Browser-Flash-Tool
+1. Make sure that the device is connected to this computer (the one that runs the browser that shows the website "ESP-BROWSER-FLASH-TOOL")
+2. Most devices have a tiny light when it is powered on. If yours has one, make sure it is on.
+3. Make sure that the USB cable you use can be used for data and is not a power-only cable.
+4. Make sure you have the right drivers installed. Below are the drivers for common chips used in ESP devices:
+- CP2102 drivers: Windows & Mac ([download](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers))
+- CH342, CH343, CH9102 drivers: [Windows](https://www.wch.cn/downloads/CH341SER_ZIP.html), [Mac](https://www.wch.cn/downloads/CH34XSER_MAC_ZIP.html)
+- CH340, CH341 drivers: [Windows](https://www.wch.cn/downloads/CH343SER_ZIP.html), [Mac](https://www.wch.cn/downloads/CH34XSER_MAC_ZIP.html)
+
+
 
 ### [Adjust, improve or extend the code](#edit)
 Open the main source file ```main.cpp``` from folder ```src``` 2️⃣ do your edits and save the file 3️⃣. Then type in terminal 4️⃣ the command **```pio run```**. This shall start the compilation and the creation of the firmware. If successful you can go to the above section [Flash the firmware](#flash) to upload your modified firmware to your device.
 
 ## Usage of the console output
-If you use the browser-based development environment you can use the ESP-Web-Flash-Tool also to monitor the serial output. A sample out put is shown below.  
+If you use the browser-based development environment you can use the ESP-Web-Flash-Tool also to monitor the serial output. A sample out put is shown below.
+
+Connect to the device via the ESP-Browser-Flash-Tool and click on "Log&Console". Then click reset device so that the start of the console output can be capture in the opened window.
+
+In the following screenshot you see the functionality of the sample application demonstrated. Therefore a pc-based mqtt-client-tool is connected to the mqtt broker. A message is published on "esp-8266-in" (default name) and your esp8266 device will respond to that with a message on the topic "esp-8266-out". The serial console output of the esp8266 can be seen on the window from the ESP-Browser-Flash-Tool.
+
+![](doc/screen_mqtt_explorer_console.png)

@@ -52,6 +52,9 @@ During the startup, the code is automatically compiled and the firmware is creat
 
 ![](doc/gitpod_overview.png)
 
+## [Adjust, improve or extend the code](#edit)
+Open the main source file ```main.cpp``` from folder ```src``` 2️⃣ do your edits and save the file 3️⃣. Then type in terminal 4️⃣ the command **```pio run```**. This shall start the compilation and the creation of the firmware. If successful you can go to the next section [Flash the firmware](#flash) to upload your modified firmware to your device.
+
 ### [Flash the firmware](#flash)
 The successfully built firmware file will be in the folder ```esp-web-flash```  and is named ```firmware.bin```.
 You can use the gitpod environment where a browser-based flash tool is integrated. Just follow the link marked by 1️⃣ (see above) and another tab will open:
@@ -61,7 +64,7 @@ You can use the gitpod environment where a browser-based flash tool is integrate
 Steps to flash the firmware:
 1. Connect your esp8266 module via USB to the PC where the browser runs
 2. Click connect
-3. Choose the corresponding com port from the list and click connect
+3. Choose the corresponding com port from the list and click connect (this functionality is provided by your browser)
 4. Click install ESP8266-MQTT-NODE or Logs&Console (see below)
 
 ![](doc/install_console_web_tool.png)
@@ -79,10 +82,6 @@ The installation of the firmware starts with eraseing the flash storage of the d
 - CH342, CH343, CH9102 drivers: [Windows](https://www.wch.cn/downloads/CH341SER_ZIP.html), [Mac](https://www.wch.cn/downloads/CH34XSER_MAC_ZIP.html)
 - CH340, CH341 drivers: [Windows](https://www.wch.cn/downloads/CH343SER_ZIP.html), [Mac](https://www.wch.cn/downloads/CH34XSER_MAC_ZIP.html)
 
-
-
-### [Adjust, improve or extend the code](#edit)
-Open the main source file ```main.cpp``` from folder ```src``` 2️⃣ do your edits and save the file 3️⃣. Then type in terminal 4️⃣ the command **```pio run```**. This shall start the compilation and the creation of the firmware. If successful you can go to the above section [Flash the firmware](#flash) to upload your modified firmware to your device.
 
 ## Usage of the console output
 If you use the browser-based development environment you can use the ESP-Web-Flash-Tool also to monitor the serial output. A sample out put is shown below.
